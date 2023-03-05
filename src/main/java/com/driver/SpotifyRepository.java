@@ -98,10 +98,12 @@ public class SpotifyRepository {
 
                 List<User> listOfUsers=new ArrayList<>();
                 if(playlistListenerMap.containsKey(playlist)) listOfUsers=playlistListenerMap.get(playlist);
+                listOfUsers.add(user);
                 playlistListenerMap.put(playlist,listOfUsers);
 
                 List<Playlist> listOfPlaylists=new ArrayList<>();
                 if(userPlaylistMap.containsKey(user)) listOfPlaylists=userPlaylistMap.get(user);
+                listOfPlaylists.add(playlist);
                 userPlaylistMap.put(user,listOfPlaylists);
 
                 return playlist;
@@ -128,10 +130,12 @@ public class SpotifyRepository {
 
                 List<User> listOfUsers=new ArrayList<>();
                 if(playlistListenerMap.containsKey(playlist)) listOfUsers=playlistListenerMap.get(playlist);
+                listOfUsers.add(user);
                 playlistListenerMap.put(playlist,listOfUsers);
 
                 List<Playlist> listOfPlaylists=new ArrayList<>();
                 if(userPlaylistMap.containsKey(user)) listOfPlaylists=userPlaylistMap.get(user);
+                listOfPlaylists.add(playlist);
                 userPlaylistMap.put(user,listOfPlaylists);
 
                 return playlist;
