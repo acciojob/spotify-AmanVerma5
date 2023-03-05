@@ -119,7 +119,7 @@ public class SpotifyRepository {
                 listOfSongs.add(song);
             }
         }
-
+        playlistSongMap.put(playlist,listOfSongs);
 
         User creator=new User();
         for(User user:users){
