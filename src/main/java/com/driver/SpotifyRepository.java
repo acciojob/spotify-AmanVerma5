@@ -50,14 +50,10 @@ public class SpotifyRepository {
     }
 
     public Album createAlbum(String title, String artistName) {
-        if(!artists.contains(artistName)){
-            Artist artist=new Artist(artistName);
-            artists.add(artist);
-        }
+        Artist artist= createArtist(artistName);
         Album album=new Album(title);
         albums.add(album);
 
-        Artist artist=new Artist(artistName);
         if(artistAlbumMap.containsKey(artist)){
             List<Album> albumList=artistAlbumMap.get(artist);
             albumList.add(album);
